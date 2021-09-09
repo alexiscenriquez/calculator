@@ -2,7 +2,7 @@ let val = document.getElementsByClassName("squares");
 let screen = document.getElementById("one");
 let clear = document.getElementById("two");
 let output = document.querySelectorAll("#one")
-let toEvaluate
+let toEvaluate=""
 let num = 0
 let calculation
 let evaluate = document.getElementById("equals");
@@ -12,24 +12,27 @@ for (let i = 0; i < val.length; i++) {
         screen.textContent += val[i].value;
         toEvaluate += val[i].value;
 
-        clear.addEventListener("click", () => {
-            toEvaluate = 0;
-            screen.textContent = ""
-            return toEvaluate;
-        })
+      
+      
         return toEvaluate
     })
 }
 
-
 evaluate.addEventListener("click", () => {
-    num = toEvaluate.slice(9)
+    num = toEvaluate
     calculation = eval(num)
     screen.textContent = calculation;
+    toEvaluate = calculation;
     return calculation;
-
 }
 )
+clear.addEventListener("click", () => {
+    toEvaluate = "";
+    screen.textContent = ""
+    return toEvaluate;
+})
+
+
 
 /*function clr() {
     toEvaluate = 0;
