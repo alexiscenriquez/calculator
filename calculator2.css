@@ -1,5 +1,5 @@
 body{
-background-color: midnightblue;
+background-color: rgb(21, 21, 82);
 scroll-behavior: smooth;}
 
 #calc{
@@ -42,7 +42,7 @@ font-family: "digital-7regular";
 justify-content: flex-end;
 font-size: 100px;
 letter-spacing: 3px;
-
+overflow: hidden;
  }
 
  #two{
