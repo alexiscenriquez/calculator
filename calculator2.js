@@ -22,7 +22,7 @@ evaluate.addEventListener("click", () => {
     num = toEvaluate
     calculation = eval(num)
     screen.textContent = calculation;
-    toEvaluate = calculation;
+    toEvaluate = Math.round(calculation);
     return calculation;
 }
 )
